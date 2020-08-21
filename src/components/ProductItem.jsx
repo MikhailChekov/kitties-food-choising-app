@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ProductItem = ({data}) => {
+const ProductItem = ({data, id, isActive, changeActive}) => {
 
     const { 
         preTitle,
@@ -16,7 +16,7 @@ const ProductItem = ({data}) => {
 
 
     return (
-        <div className="box">
+        <div className={`box ${isActive ? 'active' : ''}`} onClick={()=>{ changeActive(id) }}>
             <div className="">{preTitle}</div>
             <h2>{mainTitle}</h2>
             <div className="">{smTitle}</div>
@@ -30,6 +30,10 @@ const ProductItem = ({data}) => {
 }
 
 ProductItem.propTypes = {
+    id: PropTypes.number,
+    isActive: PropTypes.bool,
+    changeActive: PropTypes.func,
+
     data: PropTypes.shape({
         preTitle: PropTypes.string,
         mainTitle: PropTypes.string.isRequired,
@@ -43,6 +47,8 @@ ProductItem.propTypes = {
 }
 
 ProductItem.defaultProps = {
+    id: 0,
+    isActive: false,
     preTitle: '',
     smTitle: '',
     descr: '',

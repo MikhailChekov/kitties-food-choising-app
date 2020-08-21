@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ProductItem from './ProductItem';
 
-const ProductsList = ({goodsList}) => {
+const ProductsList = ({goodsList, changeActive}) => {
 
     
     return (
         <div className="cont">
-            {goodsList.map(({id, data}) => 
-                <ProductItem key={id} data={data} />
+            {goodsList.map(({data, isActive, id}) => 
+                <ProductItem key={id} data={data} id={id} isActive={isActive} changeActive={changeActive} />
             )}
         </div>
     );
@@ -18,11 +18,5 @@ const ProductsList = ({goodsList}) => {
 ProductsList.propTypes = {
     goodsList: PropTypes.array.isRequired,
 };
-  
-ProductsList.defaultProps = {
-    goodsList: [], 
-};
-
-
 
 export default ProductsList;

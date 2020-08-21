@@ -1,12 +1,11 @@
-import React from 'react';
+import React, { useState }from 'react';
 
 import ProductsList from './components/ProductsList';
 
-// import './styles/App.scss';
-
-const DEFAULT_GOODS = [
+const GOODS_LIST = [
   {
     id: 1,
+    isActive: false,
     data: {
       preTitle: 'Сказочное заморское явство',
       mainTitle: 'Нямушка',
@@ -20,6 +19,7 @@ const DEFAULT_GOODS = [
   },
   {
     id: 2,
+    isActive: false,
     data: {
       preTitle: 'Сказочное заморское явство',
       mainTitle: 'Нямушка',
@@ -32,6 +32,7 @@ const DEFAULT_GOODS = [
   },
   {
     id: 3,
+    isActive: false,
     data: {
       preTitle: 'Сказочное заморское явство',
       mainTitle: 'Нямушка',
@@ -46,9 +47,23 @@ const DEFAULT_GOODS = [
 ]
 
 const App = () => {
-  
+  const [Goods, setGoods] = useState(GOODS_LIST);
+
+  const changeActive = (id) => {
+    setGoods(Goods.map(item => {
+      if(item.id === id ){
+        return {...item, isActive: !item.isActive};
+      }else{
+        return item;
+      }
+    }))
+  }
+
   return (
-      <ProductsList goodsList={DEFAULT_GOODS} />
+      <>
+        <h1 className="title">Ты сегодня кормил кота?</h1>
+        <ProductsList changeActive={changeActive} goodsList={Goods} />
+      </>
   );
 
 }
