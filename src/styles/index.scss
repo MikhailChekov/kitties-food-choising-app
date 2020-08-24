@@ -1,13 +1,175 @@
+@import './fonts.scss';
 
-.cont {
+body{
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%),
+  url(../img/pattern.png);
+}
+
+.main{
+  margin: 200px auto;
+}
+
+h1.mainTitle{
+  margin: 20px auto;
+  width: 450px;
+  height: 34px;
+  text-shadow: 0 1px 0 #000000;
+  color: #ffffff;
+  font-family: "Exo 2.0-Thin";
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
-  height: 100px;
- }
- .box {
+}
+
+.item{
   margin: 5px;
   padding: 5px;
   flex: 0 1 100px;
- }
+}
+
+
+.box{
+  box-sizing: border-box;
+  clip-path: polygon(14% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
+  position: relative;
+  width: 320px;
+  height: 480px;
+  background-color: #f2f2f2;
+  border-radius: 5px ;
+  -moz-border-radius: 5px ;
+  -webkit-border-radius: 5px;
+  cursor: pointer;
+
+  &:before{
+    transform: rotate(43deg);
+    position: absolute;
+    top: -5px;
+    left: -7px;
+    margin: -35px;
+    padding: 35px;
+    background: transparent;
+    border-right: 5px solid #1698d9;
+    content: ''
+  }
+
+  &-in__up{
+    padding: 25px;
+    margin-left: 30px;
+    margin-top: 20px;
+    .box-pre__title{
+      color: #666666;
+      font-family: "Trebuchet MS";
+      font-size: 16px;
+      font-weight: 400;
+      }
+      &-sub__title{
+      margin-top: 20px;
+      color: #000000;
+      font-family: "Trebuchet MS";
+      font-size: 48px;
+      font-weight: 700;
+    }
+    &-sm__title{
+      margin-top: 20px;
+      color: #000000;
+      font-family: "Trebuchet MS";
+      font-size: 24px;
+      font-weight: 700;
+    }
+    &-descr{
+      margin-top: 20px;
+      color: #666666;
+      font-family: "Trebuchet MS";
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16px;
+      font-weight: 700;
+    }
+  }
+  &-in__down{
+
+    &-weight_number{
+      width: 19px;
+      height: 53px;
+      color: #ffffff;
+      font-family: "Trebuchet MS";
+      font-size: 21px;
+      font-weight: 400;
+      line-height: 22px;
+    }
+    &-weight__measure{
+      font-size: 42px;
+    }
+
+    &-circle{
+      border-radius: 50%;
+      -moz-border-radius: 50% ;
+      -webkit-border-radius: 50% ;
+    }
+    
+    &-circle__def{
+      width: 81px;
+      height: 81px;
+      background-color: #1698d9;
+    }
+    
+    &-circle__act{
+    
+    }
+    &-circle__dis{
+    
+    }
+    
+    &-image{
+    
+    }
+  }
+}
+
+.box-out{
+  
+}
+
+.box-out__act{
+    
+}
+.box-out__dis{
+
+}
+.box-out__def{
+  width: 207px;
+  height: 14px;
+  text-shadow: 0 1px 0 #000000;
+  color: #ffffff;
+  font-family: "Trebuchet MS";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  span{
+    cursor: pointer;
+    color: #1698d9;
+    font-family: "Trebuchet MS";
+    font-weight: 700;
+    border-bottom: 1px dashed;
+   }
+}
+
+
+// ---------- borders ------------ 
+
+.box-border__def{
+  border: 4px solid #1698d9;
+}
+
+.box-border__act{
+  border: 4px solid red;
+}
+.box-border__dis{
+  border: 4px solid grey;
+}

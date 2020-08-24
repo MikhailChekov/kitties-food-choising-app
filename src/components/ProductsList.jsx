@@ -6,17 +6,17 @@ const ProductsList = ({goodsList, changeActive}) => {
 
     
     return (
-        <div className="cont">
-            {goodsList.map(({data, isActive, id}) => 
-                <ProductItem key={id} data={data} id={id} isActive={isActive} changeActive={changeActive} />
+        <div className="container">
+            {goodsList.map(({data, isActive, isDisabled, id}) => 
+                <ProductItem key={id} data={data} id={id} isActive={isActive} isDisabled={isDisabled} changeActive={changeActive} />
             )}
         </div>
     );
-    
 };
 
 ProductsList.propTypes = {
     goodsList: PropTypes.array.isRequired,
 };
+
 
 export default ProductsList;
