@@ -8,10 +8,10 @@ const GOODS_LIST = [
     isActive: false,
     isDisabled: false,
     data: {
-      preTitle: 'Сказочное заморское явство',
+      preTitle: 'Сказочное заморское яство',
       subTitle: 'Нямушка',
       smSubtitle: 'с фуа-гра',
-      descr: '10 порций мышь в подарок',
+      descr: '10 порций \n мышь в подарок',
       weightNum: 0.5,
       weightMeasure: 'кг',
       boxOutDef: 'Чего сидишь? Порадуй котэ, ',
@@ -25,10 +25,10 @@ const GOODS_LIST = [
     isActive: false,
     isDisabled: false,
     data: {
-      preTitle: 'Сказочное заморское явство',
+      preTitle: 'Сказочное заморское яство',
       subTitle: 'Нямушка',
       smSubtitle: 'с рыбой',
-      descr: '40 порций 2 мыши в подарок',
+      descr: '40 порций \n 2 мыши в подарок',
       weightNum: 2 ,
       weightMeasure: 'кг',
       boxOutDef: 'Чего сидишь? Порадуй котэ, ',
@@ -42,10 +42,10 @@ const GOODS_LIST = [
     isActive: false,
     isDisabled: true,
     data: {
-      preTitle: 'Сказочное заморское явство',
+      preTitle: 'Сказочное заморское яство',
       subTitle: 'Нямушка',
       smSubtitle: 'с курой',
-      descr: '100 порций 5 мышей в подарок заказчик доволен',
+      descr: '100 порций \n 5 мышей в подарок \n заказчик доволен',
       weightNum: 5 ,
       weightMeasure: 'кг',
       boxOutDef: 'Чего сидишь? Порадуй котэ, ',
@@ -74,7 +74,7 @@ const App = () => {
 
   return (
       <div className="main">
-        <h1 className="mainTitle">Ты сегодня кормил кота?</h1>
+        <h1 className="mainTitle">Ты сегодня покормил кота?</h1>
         <ProductsList changeActive={changeActive} goodsList={Goods} />
       </div>
   );

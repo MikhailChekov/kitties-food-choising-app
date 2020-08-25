@@ -19,7 +19,7 @@ const ProductItem = ({data, id, isActive, isDisabled, changeActive}) => {
 
     return (
         <div className="item">
-            <div className={`box ${isActive ? 'box-border__act' : 'box-border__def'}`} onClick={()=>{ changeActive(id, isDisabled) }}>
+            <div className={`box ${isDisabled ? 'box-border__dis' : isActive ? 'box-border__act' : 'box-border__def'}`} onClick={()=>{ changeActive(id, isDisabled) }}>
                 <div className="box-in__up">
                     <div className="box-pre__title">{preTitle}</div>
                     <h2 className="box-sub__title">{subTitle}</h2>
@@ -28,7 +28,7 @@ const ProductItem = ({data, id, isActive, isDisabled, changeActive}) => {
                 </div>
                 <div className="box-in__down">
                     <div className="box-image"></div>
-                    <div className={`box-circle ${isActive ? 'box-circle__act' : 'box-circle__def'}`} onClick={()=>{ changeActive(id, isDisabled) }}>
+                    <div className={`box-circle ${isDisabled ?'box-circle__dis' : isActive ? 'box-circle__act' : 'box-circle__def'}`}>
                         <div className="box-weigth__number">{weightNum}</div>
                         <div className="box-weigth__measure">{weightMeasure}</div>
                     </div>
