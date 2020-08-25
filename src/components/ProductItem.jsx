@@ -27,16 +27,19 @@ const ProductItem = ({data, id, isActive, isDisabled, changeActive}) => {
                     <div className="box-descr">{descr}</div>
                 </div>
                 <div className="box-in__down">
-                    <div className="box-image"></div>
                     <div className={`box-circle ${isDisabled ?'box-circle__dis' : isActive ? 'box-circle__act' : 'box-circle__def'}`}>
                         <div className="box-weigth__number">{weightNum}</div>
                         <div className="box-weigth__measure">{weightMeasure}</div>
                     </div>
+                    <div className="box-image"></div>
                 </div>
             </div>
             {isDisabled ? <div className="box-out box-out__dis">{boxOutDis}</div> : 
-            isActive ? <div className="box-out box-out__act">{boxOutAct}</div> :
-    <div className="box-out box-out__def" onClick={()=>{ changeActive(id, isDisabled)}}>{boxOutDef}<span>{boxOutDefBuy}</span></div>}
+               isActive ? <div className="box-out box-out__act">{boxOutAct}</div> :
+                          <div className="box-out box-out__def">
+                            {boxOutDef}<span onClick={()=>{ changeActive(id, isDisabled)}}>{boxOutDefBuy}</span>
+                          </div>
+            }
         </div>
     );
 }
