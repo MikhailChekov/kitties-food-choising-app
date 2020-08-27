@@ -1,0 +1,78 @@
+/* xs(<=320 ) */
+@media (max-width: 320px) { 
+    div.main{
+        margin: 20px;
+        h1.mainTitle{
+            margin: 30px 20px;
+            font-size: 30px;
+        }
+        .item{
+            margin-bottom: 20px;
+        }
+    }
+    .container{ 
+        flex-direction: column;
+        margin-top: 70px;
+    }
+    
+}
+
+/* xs(>=321 и <=575) */
+@media (min-width: 321px) and (max-width: 575px) { 
+    div.main{
+        margin: 20px;
+        h1.mainTitle{
+            margin: 50px 20px;
+        }
+        .item{
+            margin-bottom: 20px;
+        }
+    }
+    .container{ 
+        flex-direction: column;
+        margin-top: 70px;
+    }
+    
+}
+/* sm (>=576 и <=767) */
+@media (min-width: 576px) and (max-width: 767px) { 
+    div.main{
+        margin: 20px;
+        h1.mainTitle{
+            margin: 50px 20px;
+        }
+    }
+    .container{ 
+        flex-direction: row;
+    }
+}
+/* md (>=768 и <=991) */
+@media (min-width: 768px) and (max-width: 991px){ 
+    div.main{
+        margin: 20px;
+        h1.mainTitle{
+            margin: 50px 20px;
+        }
+    }
+    .container{ 
+        flex-direction: row;
+    }
+}
+/* lg (>=992 и <=1199) */
+@media (min-width: 992px) and (max-width: 1199px) { 
+    div.main{
+        margin: 80px;
+        h1.mainTitle{
+            margin: 50px 20px;
+        }
+    }
+    .container{ 
+        flex-direction: row;
+    }
+}
+/* xl (>=1200) */
+@media (min-width: 1200px) { 
+    .container{ 
+        flex-direction: row;
+    }
+}

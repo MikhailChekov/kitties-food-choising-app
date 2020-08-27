@@ -15,6 +15,16 @@
     font-style: normal;
     font-display: swap;
 }
+
+// For standart numbers 
+@font-face {
+    font-family: 'Trebuchet MS-standart';
+    src: url('../fonts/TrebuchetMS.woff2') format('woff2'),
+        url('../fonts/TrebuchetMS.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 // For bold numbers in box-description
 @font-face {
     font-family: 'Trebuchet MS';
