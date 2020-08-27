@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/kitties-food-choising-app/static/css/main.45634226.chunk.css",
+    "main.js": "/kitties-food-choising-app/static/js/main.c67fd22b.chunk.js",
+    "main.js.map": "/kitties-food-choising-app/static/js/main.c67fd22b.chunk.js.map",
+    "runtime-main.js": "/kitties-food-choising-app/static/js/runtime-main.b252f15a.js",
+    "runtime-main.js.map": "/kitties-food-choising-app/static/js/runtime-main.b252f15a.js.map",
+    "static/js/2.f702ef9e.chunk.js": "/kitties-food-choising-app/static/js/2.f702ef9e.chunk.js",
+    "static/js/2.f702ef9e.chunk.js.map": "/kitties-food-choising-app/static/js/2.f702ef9e.chunk.js.map",
+    "index.html": "/kitties-food-choising-app/index.html",
+    "precache-manifest.7620701d3c05e2ed6fe31bb3bb4e5898.js": "/kitties-food-choising-app/precache-manifest.7620701d3c05e2ed6fe31bb3bb4e5898.js",
+    "service-worker.js": "/kitties-food-choising-app/service-worker.js",
+    "static/css/main.45634226.chunk.css.map": "/kitties-food-choising-app/static/css/main.45634226.chunk.css.map",
+    "static/js/2.f702ef9e.chunk.js.LICENSE.txt": "/kitties-food-choising-app/static/js/2.f702ef9e.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/kitties-food-choising-app/static/media/pattern.f782a444.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b252f15a.js",
+    "static/js/2.f702ef9e.chunk.js",
+    "static/css/main.45634226.chunk.css",
+    "static/js/main.c67fd22b.chunk.js"
+  ]
+}
