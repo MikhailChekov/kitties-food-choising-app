@@ -19,7 +19,10 @@ const ProductItem = ({data, id, isActive, isDisabled, changeActive}) => {
 
     return (
         <div className="item">
-            <div className={`box ${isDisabled ? 'box-dis' : isActive ? 'box-act' : 'box-def'}`}  onClick={()=>{ changeActive(id, isDisabled) }}>
+            <div 
+                onClick={()=>{ changeActive(id, isDisabled) }}
+                className={`box ${isDisabled ? 'box_theme_disabled' : isActive ? 'box_theme_active' : 'box_theme_default'}`} 
+            >
                 <div className="box-text">
                     <div className="box-pre__title">{preTitle}</div>
                     <h2 className="box-sub__title">{subTitle}</h2>
@@ -34,9 +37,10 @@ const ProductItem = ({data, id, isActive, isDisabled, changeActive}) => {
                     <div className="box-image"></div>
                 </div>
             </div>
-            {isDisabled ? <div className="box-out box-out__dis">{boxOutDis}</div> : 
-               isActive ? <div className="box-out box-out__act">{boxOutAct}</div> :
-                          <div className="box-out box-out__def">
+            {/* Outer-text */}
+            {isDisabled ? <div className="outer-text outer-text_theme_disabled">{boxOutDis}</div> : 
+               isActive ? <div className="outer-text outer-text_theme_active">{boxOutAct}</div> :
+                          <div className="outer-text outer-text_theme_default">
                             {boxOutDef}<span onClick={()=>{changeActive(id, isDisabled)}}>{boxOutDefBuy}</span>
                           </div>
             }
