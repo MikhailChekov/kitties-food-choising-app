@@ -1,35 +1,30 @@
 @font-face {
-    font-family: 'Exo 2.0-Thin';
-    src: url('../fonts/Exo20-Thin.woff2') format('woff2'),
-        url('../fonts/Exo20-Thin.woff') format('woff');
+    font-family: "Exo 2.0-Thin";
+    src: url("../fonts/Exo20-Thin.woff2") format("woff2"), url("../fonts/Exo20-Thin.woff") format("woff");
     font-weight: 100;
     font-style: normal;
     font-display: swap;
-
 }
 @font-face {
-    font-family: 'Trebuchet MS';
-    src: url('../fonts/TrebuchetMS.woff2') format('woff2'),
-        url('../fonts/TrebuchetMS.woff') format('woff');
+    font-family: "Trebuchet MS";
+    src: url("../fonts/TrebuchetMS.woff2") format("woff2"), url("../fonts/TrebuchetMS.woff") format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
-// For standart numbers 
+// For standart numbers
 @font-face {
-    font-family: 'Trebuchet MS-standart';
-    src: url('../fonts/TrebuchetMS.woff2') format('woff2'),
-        url('../fonts/TrebuchetMS.woff') format('woff');
+    font-family: "Trebuchet MS-standart";
+    src: url("../fonts/TrebuchetMS.woff2") format("woff2"), url("../fonts/TrebuchetMS.woff") format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 // For bold numbers in box-description
 @font-face {
-    font-family: 'Trebuchet MS';
-    src: url('../fonts/TrebuchetMS-Bold.woff2') format('woff2'),
-        url('../fonts/TrebuchetMS-Bold.woff') format('woff');
+    font-family: "Trebuchet MS";
+    src: url("../fonts/TrebuchetMS-Bold.woff2") format("woff2"), url("../fonts/TrebuchetMS-Bold.woff") format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;

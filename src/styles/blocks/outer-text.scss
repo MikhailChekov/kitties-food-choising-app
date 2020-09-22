@@ -1,0 +1,37 @@
+// -------------- outer-text --------------
+.container__outer-text{
+    margin: 15px auto;
+  }
+  
+  .outer-text {
+    text-align: center;
+    &_theme_active {
+      text-shadow: 0 1px 0 #000000;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 16px;
+    }
+    
+    &_theme_default {
+      text-shadow: 0 1px 0 #000000;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 16px;
+        span {
+          cursor: pointer;
+          color: $def_color;
+          font-weight: 700;
+          border-bottom: 1px dashed;
+        }
+      }
+    
+    &_theme_disabled {
+      text-shadow: 0 1px 0 #000000;
+      color: #ffff66;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 16px;
+    }
+  }

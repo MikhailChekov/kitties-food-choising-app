@@ -1,0 +1,182 @@
+.container__box {
+    margin: 0 35px;
+}
+
+.box {
+    box-sizing: border-box;
+    clip-path: polygon(14% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
+    position: relative;
+    width: 320px;
+    height: 480px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    cursor: pointer;
+
+    &__text-cont {
+        padding-left: 45px;
+        padding-top: 20px;
+        height: 182px;
+    }
+    &__pre-title {
+        font-size: 16px;
+        font-weight: 400;
+        color: #666666;
+    }
+    &__sub-title {
+        margin-top: 10px;
+        color: #000000;
+        font-size: 48px;
+        letter-spacing: 2px;
+        font-weight: 700;
+    }
+    &__sm-title {
+        margin-top: 5px;
+        color: #000000;
+        letter-spacing: 0.5px;
+        font-size: 24px;
+        font-weight: 700;
+    }
+    &__descr {
+        overflow: hidden;
+        white-space: pre-line;
+        margin-top: 15px;
+        color: #666666;
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    &__img__cont {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    &__image {
+        background: url(../../img/kitty.png) no-repeat;
+        width: 100%;
+        height: 270px;
+    }
+
+    // ------------ Circle ----------------
+    &__circle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        border-radius: 50%;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        z-index: 3;
+        width: 81px;
+        height: 81px;
+        bottom: 10px;
+        right: 10px;
+        text-align: center;
+        color: #ffffff;
+        font-family: "Trebuchet MS-standart";
+        font-weight: 400;
+        line-height: 22px;
+        transition: 2s;
+    }
+
+    &__circle_theme_default {
+        background-color: $def_color;
+    }
+    &__circle_theme_active {
+        background-color: $act_color;
+    }
+    &__circle_theme_disabled {
+        background-color: $dis_color;
+    }
+
+    &__weight-number {
+        font-size: 42px;
+        line-height: 40px;
+    }
+    &__weight-measure {
+        font-size: 21px;
+    }
+
+    // -------------- box-theme
+
+    &_theme_default {
+        border: 4px solid $def_color;
+        transition: 2s;
+
+        &:before {
+            transform: rotate(43deg);
+            position: absolute;
+            top: -5px;
+            left: -7px;
+            margin: -35px;
+            padding: 35px;
+            background: transparent;
+            border-right: 5px solid $def_color;
+            content: "";
+            transition: 2s;
+        }
+        &:hover {
+            border: 4px solid $act_color;
+
+            &:before {
+                transform: rotate(43deg);
+                position: absolute;
+                top: -5px;
+                left: -7px;
+                margin: -35px;
+                padding: 35px;
+                background: transparent;
+                border-right: 5px solid $act_color;
+                content: "";
+            }
+
+            .box__circle_theme_default {
+                background-color: $act_color !important;
+            }
+        }
+    }
+
+    &_theme_disabled {
+        border: 4px solid $dis_color;
+
+        &:before {
+            transform: rotate(43deg);
+            position: absolute;
+            top: -5px;
+            left: -7px;
+            margin: -35px;
+            padding: 35px;
+            background: transparent;
+            border-right: 5px solid $dis_color;
+            content: "";
+        }
+        //only for disabled theme
+        .box__text-cont * {
+            opacity: 0.2;
+        }
+        .box__image {
+            opacity: 0.5;
+        }
+    }
+
+    &_theme_active {
+        border: 4px solid $act_color;
+
+        &:before {
+            transform: rotate(43deg);
+            position: absolute;
+            top: -5px;
+            left: -7px;
+            margin: -35px;
+            padding: 35px;
+            background: transparent;
+            border-right: 5px solid $act_color;
+            content: "";
+        }
+    }
+}

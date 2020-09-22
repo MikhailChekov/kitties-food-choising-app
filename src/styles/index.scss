@@ -1,17 +1,23 @@
-@import './reset.scss';
-@import './fonts.scss';
-@import './media.scss';
+@import "variables.scss";
 
-$def_color: #1698d9;
-$act_color: #e62e7a;
-$dis_color: #b3b3b3;
+@import "./reset.scss";
+@import "./fonts.scss";
+@import "./media.scss";
+
+@import "./blocks/box.scss";
+@import "./blocks/outer-text.scss";
 
 body {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%), url(../img/pattern.png);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%),
+    url(../img/pattern.png);
 }
 
 .main {
   margin: 200px auto;
+}
+
+.main__title {
+  margin: 25px auto;
 }
 
 .container {
@@ -22,234 +28,17 @@ body {
   flex-wrap: wrap;
 }
 
-.item {
+.container__item {
   padding: 5px;
-  font-family: 'Trebuchet MS';
+  font-family: "Trebuchet MS";
 }
 
-.mainTitle {
-  margin: 25px auto;
+.title {
   text-align: center;
   height: 34px;
   text-shadow: 0 1px 0 #000000;
   color: #ffffff;
-  font-family: 'Exo 2.0-Thin';
+  font-family: "Exo 2.0-Thin";
   font-size: 36px;
   font-weight: 400;
-}
-
-.box {
-  margin: 0 35px;
-  box-sizing: border-box;
-  clip-path: polygon(14% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
-  position: relative;
-  width: 320px;
-  height: 480px;
-  background-color: #f2f2f2;
-  border-radius: 10px;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  cursor: pointer;
-
-  .box-text {
-    padding-left: 45px;
-    padding-top: 20px;
-    height: 182px;
-
-    .box-pre__title {
-      font-size: 16px;
-      font-weight: 400;
-      color: #666666;
-    }
-    .box-sub__title {
-      margin-top: 10px;
-      color: #000000;
-      font-size: 48px;
-      letter-spacing: 2px;
-      font-weight: 700;
-    }
-    .box-sm__title {
-      margin-top: 5px;
-      color: #000000;
-      letter-spacing: 0.5px;
-      font-size: 24px;
-      font-weight: 700;
-    }
-    .box-descr {
-      overflow: hidden;
-      white-space: pre-line;
-      margin-top: 15px;
-      color: #666666;
-      font-size: 14px;
-      line-height: 16px;
-    }
-  }
-  .box-img {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-
-    .box-image {
-      background: url(../img/kitty.png) no-repeat;
-      width: 100%;
-      height: 270px;
-    }
-  }
-}
-// ------------ Circle ----------------
-// TODO: where element and modificator? (change classes)
-.box-circle {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  border-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  z-index: 3;
-  width: 81px;
-  height: 81px;
-  bottom: 10px;
-  right: 10px;
-  text-align: center;
-  color: #ffffff;
-  font-family: 'Trebuchet MS-standart';
-  font-weight: 400;
-  line-height: 22px;
-  transition: 2s;
-
-  .box-weight_number {
-    font-size: 42px;
-    line-height: 40px;
-  }
-  .box-weight__measure {
-    font-size: 21px;
-  }
-
-  &__def {
-    background-color: $def_color;
-  }
-  &__act {
-    background-color: $act_color;
-  }
-  &__dis {
-    background-color: $dis_color;
-  }
-}
-// -------------- box-theme
-
-.box_theme_default {
-  border: 4px solid $def_color;
-  transition: 2s;
-
-  &:before {
-    transform: rotate(43deg);
-    position: absolute;
-    top: -5px;
-    left: -7px;
-    margin: -35px;
-    padding: 35px;
-    background: transparent;
-    border-right: 5px solid $def_color;
-    content: '';
-    transition: 2s;
-  }
-  &:hover {
-    border: 4px solid $act_color;
-
-    &:before {
-      transform: rotate(43deg);
-      position: absolute;
-      top: -5px;
-      left: -7px;
-      margin: -35px;
-      padding: 35px;
-      background: transparent;
-      border-right: 5px solid $act_color;
-      content: '';
-    }
-
-    .box-circle__def {
-      background-color: $act_color !important;
-    }
-  }
-}
-
-.box_theme_disabled {
-  border: 4px solid $dis_color;
-
-  &:before {
-    transform: rotate(43deg);
-    position: absolute;
-    top: -5px;
-    left: -7px;
-    margin: -35px;
-    padding: 35px;
-    background: transparent;
-    border-right: 5px solid $dis_color;
-    content: '';
-  }
-  //TODO: change class with modificator
-  .box-text * {
-    opacity: 0.2;
-  }
-  .box-image {
-    opacity: 0.5;
-  }
-}
-
-.box_theme_active {
-  border: 4px solid $act_color;
-
-  &:before {
-    transform: rotate(43deg);
-    position: absolute;
-    top: -5px;
-    left: -7px;
-    margin: -35px;
-    padding: 35px;
-    background: transparent;
-    border-right: 5px solid $act_color;
-    content: '';
-  }
-}
-
-// -------------- outer-text --------------
-.outer-text {
-  margin: 15px auto;
-  text-align: center;
-}
-
-.outer-text_theme_active {
-  text-shadow: 0 1px 0 #000000;
-  color: #ffffff;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 16px;
-}
-
-.outer-text_theme_default {
-  text-shadow: 0 1px 0 #000000;
-  color: #ffffff;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 16px;
-  span {
-    cursor: pointer;
-    color: $def_color;
-    font-weight: 700;
-    border-bottom: 1px dashed;
-  }
-}
-
-.outer-text_theme_disabled {
-  text-shadow: 0 1px 0 #000000;
-  color: #ffff66;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 16px;
 }

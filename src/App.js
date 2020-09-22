@@ -74,7 +74,7 @@ const App = () => {
 
   return (
       <div className="main">
-        <h1 className="mainTitle">Ты сегодня покормил кота?</h1>
+        <h1 className="title main__title">Ты сегодня покормил кота?</h1>
         <ProductsList changeActive={changeActive} goodsList={Goods} />
       </div>
   );
